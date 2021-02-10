@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Contact Management</title>
+        <link href="contact.css" rel="stylesheet" type="text/css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="fontawesome/css/all.min.css">
+
+    </head>
+
+    <body>
+        
+
+        <h1> CONTACT MANAGEMENT</h1>
+        <p>Welcome to CONTAXTS-APP<br> Stay in touch with your friends anywhere in the world and keep track of them!</p>
+        <div class="cm-table-container" id="cmTableContainer">
+         
+            <div class="cm-table-row">
+                
+                    <div class="cm-table-colm cm-name cm-header"> Name </div>
+                    <div class="cm-table-colm cm-phone cm-header">Phone Number</div>
+                    <div class="cm-table-colm cm-address cm-header">Address</div>
+                    <div class="cm-table-colm cm-header cm-add-entry-colm" id="cmAddNewEntry" style="position: absolute; right: 8px; bottom: 70px;"> + </div>
+            </div>
+            <span id="tableBody"></span>
+            
+                <div class="cm-img-container" id="profile-container">
+                    <image id="profileImage" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"/></div>
+                    <input class="cm-img-upload" id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required="" capture>
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        </div>
+
+        <div class="disable-modal" id="backdrop"></div>
+        <div class="disable-modal" id="newPersonModal"> 
+            <h1>Add New Contact</h1>
+
+            
+            
+        
+
+            <label for="newPersonName">Name</label>
+            <input type="text" id="newPersonName">
+
+            <label for="newPersonPhone">Phone Number</label>
+            <input type="text" id="newPersonPhone">
+
+            <label for="newPersonAddress">Address</label>
+            <input type="text" id="newPersonAddress">
+
+            <button id="newPersonCancelBtn">Cancel</button>
+            <button id="newPersonSubmitBtn">Submit</button>
+
+        </div>
+
+        <script src="script.js"></script>
+
+    </body>
+</html>
