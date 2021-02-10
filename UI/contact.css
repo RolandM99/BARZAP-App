@@ -1,0 +1,168 @@
+
+body {
+    background-image: url('https://cdn.pixabay.com/photo/2015/03/26/09/44/cell-phone-690192_960_720.jpg');
+    color: rgb(255, 255, 255);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+h1 {
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 40px;
+    text-shadow: 5px 5px 5px black;
+}
+p {
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    text-shadow: 5px 5px 5px black;
+}
+
+.cm-table-container {
+    font-size: 20px;
+    margin-top: 20px;
+    margin: auto;
+    width: 75%;
+}
+.cm-table-row {
+    display: flex;
+}
+.cm-table-colm {
+    background-color: rgb(189, 52, 52);
+    padding: 8px;
+    margin: 2px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.cm-name {
+    flex-basis: 16%;
+    flex-grow: 1;
+}
+.cm-phone {
+    flex-basis: 16%;
+    flex-grow: 1;
+}
+.cm-address {
+    flex-grow: 1.5;
+    flex-basis: 16%;
+}
+#cmAddNewEntry {
+    flex-basis: 16%;
+    flex-grow: 2;
+    margin-right: 10px;
+}
+.cm-header {
+    font-weight: bold;
+    background-color: rgb(189, 52, 52);
+}
+.cm-edit, .cm-delete {
+    text-align: center;
+    cursor: pointer;
+    flex-basis: 5%;
+    background-color: rgb(189, 52, 52);
+    z-index: 90px;
+    padding: 10px;
+    margin: calc(50% - 509px);
+} 
+.cm-add-entry-colm {
+    cursor: pointer;
+    padding: 20px;
+}
+#newPersonModal {
+    width: 500px;
+    padding: 10px;
+    border-radius: 3px;
+    z-index: 99;
+    position: absolute;
+    top: 50px;
+    background-color: rgb(189, 52, 52);
+    margin-left: calc(50% - 250px);
+}
+#newPersonModal input {
+    display: block;
+    margin-bottom: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    border: 3px;
+    border-radius: 2px;
+} 
+/*upload picture*/
+#imageUpload
+{
+    display: none;
+}
+
+#profileImage
+{
+    cursor: pointer;
+    
+}
+
+#profile-container {
+    left: 10px;
+    width: 60px;
+    height: 60px;
+    overflow: hidden;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border-radius: 50%;
+}
+
+#profile-container img {
+    width: 60px;
+    height: 60px;
+}
+/*end */
+.input-err {
+    background-color:  rgb(221, 18, 18);
+}
+#backdrop {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0.8);
+    z-index: 50;
+    top: 0;
+    left: 0;
+   
+}
+
+button {
+    padding: 15px;
+    border-radius: 5px;
+    float: right;
+    border: none;
+    margin: 5px;
+    cursor: pointer;
+}
+button:hover {
+    padding: 13px;
+}
+#newPersonSubmitBtn {
+    background-color: cornflowerblue;
+}
+#newPersonCancelBtn {
+    background-color: rgb(119, 37, 37);
+}
+
+.disable-modal {
+    visibility: hidden;
+}
+.enable-modal {
+    visibility: visible;
+}
+i {
+    pointer-events: none;
+
+}
