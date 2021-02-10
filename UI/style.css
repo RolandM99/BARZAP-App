@@ -18,6 +18,7 @@ img {
     color: rgb(255, 255, 255);
     background-color: #f04153;
     border: none;
+    font-size: 1.2em;
 }
 #Layer_1 {
     position: absolute;
