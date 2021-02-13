@@ -220,5 +220,16 @@ let init = () => {
         localStorage.setItem(tableKey, JSON.stringify(cmTable));
     }
     refreshDOMTable();
+    
+    cmTable = Object.keys(cmTable).sort().reduce(
+    (obj, key) => { 
+      obj[key] = cmTable[key]; 
+      return obj;
+    }, 
+    {}
+  );
+  
+  localStorage.setItem(tableKey,JSON.stringify(cmTable));
+  refreshDOMTable();
 }
 init();
