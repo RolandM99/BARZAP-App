@@ -42,10 +42,10 @@ let refreshDOMTable = () => {
         let currentAddressCol = document.createElement('div');
         let currentEditBtn = document.createElement('div');
         let currentDeleteBtn = document.createElement('div');
-        let currentPhotoCont = document.createElement('input');
+     
 
         currentRow.className = 'cm-table-row';
-        currentPhotoCont = 'cm-img-upload';
+     
         currentNameCol.className = 'cm-table-colm cm-name';
         currentPhoneCol.className = 'cm-table-colm cm-phone';
         currentAddressCol.className = 'cm-table-colm cm-address';
@@ -55,7 +55,7 @@ let refreshDOMTable = () => {
         currentNameCol.innerHTML = cmTableKeys[i];
         currentPhoneCol.innerHTML = cmTable[cmTableKeys[i]].phone;
         currentAddressCol.innerHTML = cmTable[cmTableKeys[i]].address;
-        currentPhotoCont.innerHTML = '<input class="cm-img-upload" id="imageUpload" type="file" name="profile_photo" placeholder="Photo" required="" capture></input>';
+      
 
         currentEditBtn.innerHTML = '<i class="far fa-edit"></i>'; 
         currentDeleteBtn.innerHTML = '<i class="far fa-trash-alt"></i>';
@@ -63,7 +63,6 @@ let refreshDOMTable = () => {
         currentRow.appendChild(currentNameCol);
         currentRow.appendChild(currentPhoneCol);
         currentRow.appendChild(currentAddressCol);
-        //currentRow.appendChild(currentPhotoCont);
         currentRow.appendChild(currentEditBtn);
         currentRow.appendChild(currentDeleteBtn);
         newTableBody.appendChild(currentRow);
