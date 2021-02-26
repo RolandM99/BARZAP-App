@@ -5,7 +5,7 @@
 BARZAP is an abbreviation of Baki na Rafiki Zako Pamoja which means in swahili language "stay together with your friends" . 
 BARZAP is an application that helps users to keep track of contact information of people in their circles.
 eg.: name, phone number,adddress,...
->>>>>>> 9fb79ac48919b306118a11439a26a7be99528d54
+
 
 # Required Features
    
