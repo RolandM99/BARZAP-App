@@ -42,23 +42,36 @@ let refreshDOMTable = () => {
         let currentAddressCol = document.createElement('div');
         let currentEditBtn = document.createElement('div');
         let currentDeleteBtn = document.createElement('div');
+<<<<<<< HEAD
+        let currentCallBtn = document.createElement('div');
+
+        currentRow.className = 'cm-table-row';
+=======
      
 
         currentRow.className = 'cm-table-row';
      
+>>>>>>> master
         currentNameCol.className = 'cm-table-colm cm-name';
         currentPhoneCol.className = 'cm-table-colm cm-phone';
         currentAddressCol.className = 'cm-table-colm cm-address';
         currentEditBtn.className = 'cm-edit';
         currentDeleteBtn.className = 'cm-delete';
+        currentCallBtn.className = 'cm-call';
 
         currentNameCol.innerHTML = cmTableKeys[i];
         currentPhoneCol.innerHTML = cmTable[cmTableKeys[i]].phone;
         currentAddressCol.innerHTML = cmTable[cmTableKeys[i]].address;
+<<<<<<< HEAD
+        
+        currentEditBtn.innerHTML = '<i class="fas fa-user-edit"></i>'; 
+=======
       
 
         currentEditBtn.innerHTML = '<i class="far fa-edit"></i>'; 
+>>>>>>> master
         currentDeleteBtn.innerHTML = '<i class="far fa-trash-alt"></i>';
+        currentCallBtn.innerHTML = '<i class="fas fa-phone"></i>';
         
         currentRow.appendChild(currentNameCol);
         currentRow.appendChild(currentPhoneCol);
@@ -66,25 +79,10 @@ let refreshDOMTable = () => {
         currentRow.appendChild(currentEditBtn);
         currentRow.appendChild(currentDeleteBtn);
         newTableBody.appendChild(currentRow);
+        currentRow.appendChild(currentCallBtn);
 
     } 
 
-    // Contact upload picture
-
-    $("#profileImage").click(function(e) {
-        $("#imageUpload").click();
-    });
-    
-     function fasterPreview( uploader ) {
-        if ( uploader.files && uploader.files[0] ){
-              $('#profileImage').attr('src', 
-                window.URL.createObjectURL(uploader.files[0]) );
-        }
-    }
-    
-    $("#imageUpload").change(function(){
-        fasterPreview( this );
-    });
 
     let enableDisableNewUserModal = (option) => {
         let newPersonName = document.getElementById('newPersonName') ;
@@ -105,7 +103,6 @@ let refreshDOMTable = () => {
     let addNewEntryBtn = document.getElementById('cmAddNewEntry');
     let editBtn = document.getElementsByClassName('cm-edit');
     let deleteBtn = document.getElementsByClassName('cm-delete');
-    let imageProfile = document.getElementById('imageUpload');
 
     let newPersonSubmitBtn = document.getElementById('newPersonSubmitBtn');
     let newPersonCancelBtn = document.getElementById('newPersonCancelBtn');
@@ -129,6 +126,7 @@ let refreshDOMTable = () => {
             document.getElementById('newPersonAddress').className = 'input-err';
         else 
             document.getElementById('newPersonAddress').className = '' ;
+
         if(newPersonName !== '' && newPersonPhone !== '' && newPersonAddress !== '') {
             let newPerson = {};
             cmTable[newPersonName] = {
@@ -142,10 +140,10 @@ let refreshDOMTable = () => {
               
     });
       
-    newPersonCancelBtn.addEventListener('click',() => {
+    newPersonCancelBtn.addEventListener('click', () => {
         enableDisableNewUserModal('disable');
     })   
-    addNewEntryBtn.addEventListener('click',() =>{
+    addNewEntryBtn.addEventListener('click',() => {
         enableDisableNewUserModal('enable');
     });
 
@@ -165,23 +163,6 @@ let refreshDOMTable = () => {
              
             enableDisableNameInput('disable');
         })
-    }
-
-    for (let i = 0; i < imageProfile.length; i++) {
-        imageProfile[i].$("#profileImage").click(function(e) {
-            $("#imageUpload").click();
-        });
-        
-         function fasterPreview( uploader ) {
-            if ( uploader.files && uploader.files[i] ){
-                  $('#profileImage').attr('src', 
-                    window.URL.createObjectURL(uploader.files[i]) );
-            }
-        }
-        
-        $("#imageUpload").change(function(){
-            fasterPreview( this );
-        });
     }
 
     for (let i=0; i < deleteBtn.length; i++) {
@@ -205,7 +186,7 @@ let deleteUserFromTable = (userName) => {
     }
     cmTable = tempTable;
     localStorage.setItem(tableKey,JSON.stringify(cmTable));
-    refreshDOMTable()
+    refreshDOMTable();
 
 }
 
