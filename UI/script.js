@@ -42,11 +42,16 @@ let refreshDOMTable = () => {
         let currentAddressCol = document.createElement('div');
         let currentEditBtn = document.createElement('div');
         let currentDeleteBtn = document.createElement('div');
+<<<<<<< HEAD
         let currentCallBtn = document.createElement('div');
 
         currentRow.className = 'cm-table-row';
-
+=======
      
+
+        currentRow.className = 'cm-table-row';
+     
+>>>>>>> master
         currentNameCol.className = 'cm-table-colm cm-name';
         currentPhoneCol.className = 'cm-table-colm cm-phone';
         currentAddressCol.className = 'cm-table-colm cm-address';
@@ -57,8 +62,14 @@ let refreshDOMTable = () => {
         currentNameCol.innerHTML = cmTableKeys[i];
         currentPhoneCol.innerHTML = cmTable[cmTableKeys[i]].phone;
         currentAddressCol.innerHTML = cmTable[cmTableKeys[i]].address;
+<<<<<<< HEAD
         
         currentEditBtn.innerHTML = '<i class="fas fa-user-edit"></i>'; 
+=======
+      
+
+        currentEditBtn.innerHTML = '<i class="far fa-edit"></i>'; 
+>>>>>>> master
         currentDeleteBtn.innerHTML = '<i class="far fa-trash-alt"></i>';
         currentCallBtn.innerHTML = '<i class="fas fa-phone"></i>';
         
