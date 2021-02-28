@@ -17,3 +17,4 @@ eg.: name, phone number,adddress,...
     1. The application should upload a contact picture to firebase storage and save the picture
        url to the contact.
     2. The application should display a list of favorite contacts.
+
