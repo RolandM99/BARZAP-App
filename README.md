@@ -1,0 +1,2 @@
+# BARZAP-App
+Barzap-App is an application that helps users to keep track of contact information of people in their circles.
