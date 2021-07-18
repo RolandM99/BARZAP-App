@@ -1,6 +1,3 @@
-const tableKey = 'cm-table';
-
-
 let cmTable;
 let cmTableDemo = {
     'Roland MANFUL' : {
@@ -43,6 +40,7 @@ let refreshDOMTable = () => {
         let currentEditBtn = document.createElement('div');
         let currentDeleteBtn = document.createElement('div');
         let currentCallBtn = document.createElement('div');
+        let currentFavBtn = document.createElement('div');
 
         currentRow.className = 'cm-table-row';
 
@@ -53,6 +51,7 @@ let refreshDOMTable = () => {
         currentEditBtn.className = 'cm-edit';
         currentDeleteBtn.className = 'cm-delete';
         currentCallBtn.className = 'cm-call';
+        currentFavBtn.className = 'cm-favorite';
 
         currentNameCol.innerHTML = cmTableKeys[i];
         currentPhoneCol.innerHTML = cmTable[cmTableKeys[i]].phone;
@@ -61,6 +60,7 @@ let refreshDOMTable = () => {
         currentEditBtn.innerHTML = '<i class="fas fa-user-edit"></i>'; 
         currentDeleteBtn.innerHTML = '<i class="far fa-trash-alt"></i>';
         currentCallBtn.innerHTML = '<i class="fas fa-phone"></i>';
+        currentFavBtn.innerHTML = '<i class="fas fa-star"></i>'
         
         currentRow.appendChild(currentNameCol);
         currentRow.appendChild(currentPhoneCol);
@@ -69,6 +69,7 @@ let refreshDOMTable = () => {
         currentRow.appendChild(currentDeleteBtn);
         newTableBody.appendChild(currentRow);
         currentRow.appendChild(currentCallBtn);
+        currentRow.appendChild(currentFavBtn);
 
     } 
 
@@ -85,8 +86,8 @@ let refreshDOMTable = () => {
         let newPersonModal = document.getElementById('newPersonModal');
         let backdrop = document.getElementById('backdrop');
 
-         newPersonModal.className = '${option}-modal';
-         backdrop.className = '${option}-modal';
+         newPersonModal.className = `${option}-modal`;
+         backdrop.className = `${option}-modal`;
     }
 
     let addNewEntryBtn = document.getElementById('cmAddNewEntry');
@@ -157,7 +158,7 @@ let refreshDOMTable = () => {
     for (let i=0; i < deleteBtn.length; i++) {
         deleteBtn[i].addEventListener('click', ($event) => {
             let nameToDelete = $event.target.parentElement.children[0].innerText;
-            let isSure = window.confirm('Are you sure you want to delete' + nameToDelete + '?');
+            let isSure = window.confirm('Are you sure you want to delete'+ ' '  + nameToDelete + '?');
             if(isSure)
                deleteUserFromTable(nameToDelete);
         })
