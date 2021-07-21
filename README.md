@@ -18,7 +18,3 @@ for example: name, phone number,adddress,...
     1. The application should upload a contact picture to firebase storage and save the picture
        url to the contact.
     2. The application should display a list of favorite contacts.
-<<<<<<< HEAD
-=======
-
->>>>>>> 4e0e9afea2e0ada28ffa5f6c820a584bc8753103
